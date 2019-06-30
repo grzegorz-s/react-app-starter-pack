@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import * as Colors from 'styles/Variables';
 import { StyledHeading } from 'styles/Typography';
 
@@ -12,12 +12,6 @@ export const StyledHeader = styled.header`
 
 export const StyledHeaderCol = styled.div`
   flex: 1;
-
-  ${props =>
-    props.isCenterText &&
-    css`
-      text-align: center;
-    `}
 `;
 
 export const TitleStyled = styled(StyledHeading)`

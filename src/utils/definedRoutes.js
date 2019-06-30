@@ -1,27 +1,11 @@
 import React from 'react';
-import { Route, Redirect, Switch, withRouter } from 'react-router-dom';
+import { Redirect, Switch, withRouter } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+import AnimatedRoute from 'components/AnimatedRoute/AnimatedRoute';
 import Home from 'pages/Home/Home';
 import Listing from 'pages/Listing/Listing';
 import Details from 'pages/Details/Details';
-
-const AnimatedRoute = props => (
-  <div
-    className="yolo"
-    style={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      padding: '20px',
-      WebkitBackfaceVisibility: 'hidden'
-    }}
-  >
-    <Route {...props} />
-  </div>
-);
 
 // needed for not animinating details if thay are nested
 // excample with details in modal - first part of pathname stays the same
