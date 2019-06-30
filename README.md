@@ -1,51 +1,63 @@
-Under the hood project was started with [Create React App](https://github.com/facebook/create-react-app).
+Sample, very basic repo for stating react app. You can use existing components and configs or use them as examples so your development might be easier.
+
+---
+
+Inside you'll find:
+
+- setup for unit test with Jest and Enzyme
+- storybook with sample components
+- husky hooks for commit and push
+- configs for: prettier, eslint, stylelint, jest
+- opiniotated file structure
+- some base router with transition on route
+  enter
+- basic layout
+- sample components you can use or get to know how to create your own
+
+You can check how it's looking without cloning this repo:
+
+[Sample app](https://react-app-starter-pack.netlify.com/)
+
+[App storybook](https://react-app-starter-pack-storybook.netlify.com)
 
 ## Scripts you can in this project
 
-### `yarn start`
+#### `yarn start`
 
-### `yarn start:staging`
+Allows you to start development server in watch mode, hot reload and that's all you need for work.
 
-### `yarn test`
+#### `yarn start:staging`
 
-### `yarn test:cover`
+Allows you to start development server in watch mode with env variables that match your staging/dev env stored in `/config/environments/staging.js`
 
-### `yarn test:report`
+#### `yarn test`
 
-### `yarn build`
+Starts test in wathc mode.
 
-### `yarn stage`
+#### `yarn test:cover`
 
-### `yarn storybook`
+Runs tests and displays cover report in console.
 
-### `yarn build-storybook`
+#### `yarn test:report`
 
-## Learn More
+Runs tests and generates a static page with test coverage.A nifty tool for exploring missisng test.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### `yarn build`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bundles and minifies your app to `/build` directory -> ready to deploy with env variables that match your production env stored in `/config/environments/production.js`
 
-### Code Splitting
+#### `yarn stage`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Bundles and minifies your app to `/build` directory -> ready to deploy to your staging env with env variables that match your staging env stored in `/config/environments/staging.js`
 
-### Analyzing the Bundle Size
+#### `yarn storybook`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Starts storybook in watchmode. Storybook will run locally [http://localhost:6006/](http://localhost:6006/)
 
-### Making a Progressive Web App
+#### `yarn build-storybook`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Compiles static storybook to `storybook-static` folder.
 
-### Advanced Configuration
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#yarn-run-build-fails-to-minify
+Under the hood, project was started with [Create React App](https://github.com/facebook/create-react-app).
