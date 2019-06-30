@@ -1,0 +1,10 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#6C5FB3",
+    "titleBar.inactiveBackground": "#6C5FB399",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "eslint.autoFixOnSave": true,
+  "editor.tabSize": 2
+}

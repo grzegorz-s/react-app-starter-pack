@@ -1,0 +1,6 @@
+# TODO fix linter to accept those files
+/src/styles/_reset.scss
+/src/styles/_normalize.scss
+/src/styles/_index.scss
+/src/styles/_global.scss
+/src/styles/_fonts.scss

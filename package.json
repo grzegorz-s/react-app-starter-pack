@@ -1,0 +1,147 @@
+{
+  "name": "react-app-starter-pack",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/start.js --environment=development",
+    "start:staging": "node scripts/start.js --environment=staging",
+    "build": "node scripts/build.js --environment=production",
+    "stage": "node scripts/build.js --environment=staging",
+    "test": "node scripts/test.js",
+    "test:cover": "yarn run test --coverage",
+    "test:report": "yarn run test:cover && open coverage/lcov-report/index.html",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@babel/core": "7.2.2",
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-knobs": "^5.0.6",
+    "@storybook/addon-links": "^5.0.6",
+    "@storybook/addons": "^5.0.6",
+    "@storybook/react": "^5.0.6",
+    "@svgr/webpack": "4.1.0",
+    "axios": "^0.18.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-loader": "8.0.5",
+    "babel-plugin-named-asset-import": "^0.3.1",
+    "babel-preset-react-app": "^7.0.2",
+    "bfj": "6.1.1",
+    "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "css-loader": "1.0.0",
+    "dotenv": "6.0.0",
+    "dotenv-expand": "4.2.0",
+    "file-loader": "2.0.0",
+    "flatpickr": "^4.5.7",
+    "fs-extra": "7.0.1",
+    "html-webpack-plugin": "4.0.0-alpha.2",
+    "identity-obj-proxy": "3.0.0",
+    "intl": "^1.2.5",
+    "jest": "23.6.0",
+    "jest-pnp-resolver": "1.0.2",
+    "jest-resolve": "23.6.0",
+    "jest-watch-typeahead": "^0.2.1",
+    "lodash": "^4.17.11",
+    "material-ui-chip-input": "^1.0.0-beta.11",
+    "mini-css-extract-plugin": "0.5.0",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "pnp-webpack-plugin": "1.2.1",
+    "polished": "^3.2.0",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-preset-env": "6.5.0",
+    "postcss-safe-parser": "4.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-app-polyfill": "^0.2.2",
+    "react-content-loader": "^4.2.1",
+    "react-dev-utils": "^8.0.0",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-test-renderer": "^16.8.6",
+    "react-transition-group": "^4.1.1",
+    "resolve": "1.10.0",
+    "sass-loader": "7.1.0",
+    "storybook-addon-jsx": "^7.1.0",
+    "style-loader": "0.23.1",
+    "styled-components": "^4.2.0",
+    "terser-webpack-plugin": "1.2.2",
+    "url-loader": "1.1.2",
+    "webpack": "4.28.3",
+    "webpack-dev-server": "3.1.14",
+    "webpack-manifest-plugin": "2.0.4",
+    "workbox-webpack-plugin": "3.6.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "eslint": "5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "2.50.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "husky": "^1.3.1",
+    "jest-canvas-mock": "^2.1.0",
+    "jest-styled-components": "^6.3.1",
+    "lint-staged": "^8.1.5",
+    "node-sass": "^4.11.0",
+    "opn-cli": "^5.0.0",
+    "prettier": "^1.16.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.6.0",
+    "stylelint-scss": "^3.5.4",
+    "yargs": "^13.2.4"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "babel-plugin-styled-components"
+      ]
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test --no-watch"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --no-ignore --fix",
+      "git add --force"
+    ],
+    "*.{json,md,graphql}": [
+      "prettier --write",
+      "git add --force"
+    ],
+    "*.{css,less,styl,scss,sass,sss}": [
+      "stylelint",
+      "git add --force"
+    ]
+  }
+}
